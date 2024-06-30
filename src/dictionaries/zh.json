@@ -94,9 +94,15 @@
         "bus": "校車"
     },
     "bus": {
+        "school_bus": "校園巴士",
+        "city_bus": "市區公車",
+        "intercity_bus": "客運",
         "north_gate": "北校門口",
         "tsmc": "台積館",
         "nanda": "南大校區",
+        "nthu": "清華大學(北校門)",
+        "from_nthu": "從 清華大學 出發",
+        "to_nthu": "前往 清華大學",
         "main_campus": "校本部",
         "service_over": "末班車已過",
         "red_line": "紅線",
@@ -104,6 +110,7 @@
         "nanda_line": "南大校車",
         "departing": "即將發車",
         "departed": "已過站",
+        "error": "未知錯誤",
         "validity": "有效期限",
         "route": "路線",
         "departure_time": "出發時間",

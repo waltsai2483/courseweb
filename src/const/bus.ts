@@ -19,6 +19,84 @@ export interface Stop {
     code: string;
 }
 
+export const cityBuses: CityBus[] = [
+    { id: "00200", title_zh: "2", title_en: "2", direction: ['1', '2'] },
+    { id: "0020A", title_zh: "2支A", title_en: "2A", direction: ['1', '2']  },
+    { id: "03100", title_zh: "31", title_en: "31", direction: ['1', '2']  },
+    { id: "07430", title_zh: "藍線", title_en: "Blue", direction: ['1', '2']  },
+    { id: "00100", title_zh: "藍線1區", title_en: "Blue 1", direction: ['1']  },
+    { id: "00080", title_zh: "83", title_en: "83", direction: ['1', '2']  },
+    { id: "01820", title_zh: "182", title_en: "182", direction: ['1', '2']  }
+]
+
+export const intercityBuses: IntercityBus[] = [
+    { title_zh: "1250", title_en: "1250", id: "12500" },
+    { title_zh: "1728", title_en: "1728", id: "17280" },
+    { title_zh: "1804", title_en: "1804", id: "18040" },
+    { title_zh: "1804A", title_en: "1804A", id: "1804A" },
+    { title_zh: "1822", title_en: "1822", id: "18220" },
+    { title_zh: "1865", title_en: "1865", id: "18650" },
+    { title_zh: "1866", title_en: "1866", id: "18660" },
+    { title_zh: "1866A", title_en: "1866A", id: "1866A" },
+    { title_zh: "1866B", title_en: "1866B", id: "1866B" },
+    { title_zh: "2011", title_en: "2011", id: "20110" },
+    { title_zh: "5608", title_en: "5608", id: "56080" },
+    { title_zh: "9003", title_en: "9003", id: "90030" },
+    { title_zh: "9010", title_en: "9010", id: "90100" }
+]
+/*
+export const supportedIntercityBuses: { from_nthu: IBus[], to_nthu: IBus[] } = {
+    from_nthu: [
+        { title_zh: "1250", title_en: "1250", id: "11052" },
+        { title_zh: "1728", title_en: "1728", id: "15571" },
+        { title_zh: "1804", title_en: "1804", id: "17351" },
+        { title_zh: "1804A", title_en: "1804A", id: "11802" },
+        { title_zh: "1822", title_en: "1822", id: "4611" },
+        { title_zh: "1865", title_en: "1865", id: "17363" },
+        { title_zh: "1866", title_en: "1866", id: "18723" },
+        { title_zh: "1866A", title_en: "1866A", id: "17259" },
+        { title_zh: "1866B", title_en: "1866B", id: "18726" },
+        { title_zh: "2011", title_en: "2011", id: "2568" },
+        { title_zh: "5608", title_en: "5608", id: "20944" },
+        { title_zh: "9003", title_en: "9003", id: "13475" },
+        { title_zh: "9010", title_en: "9010", id: "20529" }
+    ],
+    to_nthu: [
+        { title_zh: "1250", title_en: "1250", id: "11053" },
+        { title_zh: "1728", title_en: "1728", id: "15572" },
+        { title_zh: "1804", title_en: "1804", id: "17353" },
+        { title_zh: "1804A", title_en: "1804A", id: "10778" },
+        { title_zh: "1822", title_en: "1822", id: "16386" },
+        { title_zh: "1865", title_en: "1865", id: "17364" },
+        { title_zh: "1866", title_en: "1866", id: "4622" },
+        { title_zh: "1866A", title_en: "1866A", id: "17222" },
+        { title_zh: "1866B", title_en: "1866B", id: "11105" },
+        { title_zh: "2011", title_en: "2011", id: "16262" },
+        { title_zh: "5608", title_en: "5608", id: "20945" },
+        { title_zh: "9003", title_en: "9003", id: "17350" },
+        { title_zh: "9010", title_en: "9010", id: "20532" }
+    ]
+}
+
+export interface IBus {
+    id: string,
+    title_zh: string,
+    title_en: string
+}*/
+
+export interface CityBus {
+    id: string,
+    title_zh: string,
+    title_en: string,
+    direction: ('1' | '2')[]
+}
+
+export interface IntercityBus {
+    id: string,
+    title_zh: string,
+    title_en: string,
+}
+
 export const routes: Route[] = [
     { title_zh: '綠 - 台積館', title_en: 'Green - TSMC Build.', color: '#1CC34B', code: 'GU', path: ['A1U', 'A2U', 'A3U', 'A6U', 'A5U', 'A7D'] },
     { title_zh: '綠 - 台積館', title_en: 'Green - TSMC Build.', color: '#1CC34B', code: 'GUS', path: ['A2U', 'A3U', 'A6U', 'A5U', 'A7D'] },

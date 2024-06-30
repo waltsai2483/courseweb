@@ -1,5 +1,5 @@
 import { set } from "date-fns";
-import {BusDepartureDetails} from '@/app/[lang]/(mods-pages)/bus/[route]/page.actions';
+import {BusDepartureDetails} from '@/app/[lang]/(mods-pages)/bus/school-bus/[route]/page.actions';
 import { Language } from "@/types/settings";
 
 export const getTimeOnDate = (date: Date, time: string) => {

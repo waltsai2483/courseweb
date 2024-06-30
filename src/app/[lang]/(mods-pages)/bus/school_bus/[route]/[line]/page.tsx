@@ -13,7 +13,7 @@ import { Bus, ChevronLeft } from "lucide-react";
 import Link from "next/link";
 import { useParams, useSearchParams } from "next/navigation";
 import { useMemo } from "react";
-import { getBusesSchedules } from "../../page.actions";
+import { getBusesSchedules } from "../../../page.actions";
 import { useQuery } from "@tanstack/react-query";
 
 enum BusStationState {

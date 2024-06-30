@@ -94,9 +94,15 @@
         "bus": "Bus"
     },
     "bus": {
+        "school_bus": "School Bus",
+        "city_bus": "City Bus",
+        "intercity_bus": "Intercity Bus",
         "north_gate": "North Gate",
         "tsmc": "TSMC",
         "nanda": "Nanda Campus",
+        "nthu": "NTHU (North Gate)",
+        "from_nthu": "Departed from NTHU",
+        "to_nthu": "Return to NTHU",
         "main_campus": "Main Campus",
         "service_over": "Service Over",
         "red_line": "Red Line",
@@ -104,6 +110,7 @@
         "nanda_line": "Nanda Line",
         "departing": "Departing",
         "departed": "Departed",
+        "error": "Unknown Error",
         "validity": "Validity",
         "route": "Route",
         "departure_time": "Departure Time",

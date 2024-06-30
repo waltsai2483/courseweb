@@ -1,6 +1,6 @@
 'use client';;
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
-import { BusDepartureDetails, LineInfo } from '@/app/[lang]/(mods-pages)/bus/[route]/page.actions';
+import { BusDepartureDetails, LineInfo } from '@/app/[lang]/(mods-pages)/bus/school-bus/[route]/page.actions';
 import { Table, TableBody, TableCell, TableHeader, TableRow } from '@/components/ui/table';
 import { useParams, useRouter } from 'next/navigation';
 import { SVGProps, useEffect, useMemo, useRef, useState } from 'react';
