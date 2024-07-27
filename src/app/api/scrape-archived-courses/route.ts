@@ -48,7 +48,8 @@ export const GET = async (request: NextRequest, _try = 0) => {
             "body": null,
             "method": "GET",
             "mode": "cors",
-            "credentials": "include"
+            "credentials": "include",
+            "cache": "no-cache"
           });
         const body = await res.text();
         if(!body) {
@@ -74,6 +75,7 @@ export const GET = async (request: NextRequest, _try = 0) => {
     
         const response = await fetch(baseUrl, {
             body: new URLSearchParams({
+                "cache-control": "max-age=0",
                 'ACIXSTORE': `${ACIXSTORE}`,
                 'YS': `${yearSemester.slice(0, 3)}|${yearSemester.slice(3, 5)}`,
                 'cond': 'a',
@@ -81,6 +83,7 @@ export const GET = async (request: NextRequest, _try = 0) => {
                 'auth_num': `${answer}`,
             }),
             method: "POST",
+            "cache": "no-cache"
         });
         return response;
     }
@@ -93,7 +96,7 @@ export const GET = async (request: NextRequest, _try = 0) => {
 
         const text = await fetchCourses(department, semester)
             .then(res => res.arrayBuffer())
-            .then(arrayBuffer => iconv.decode(Buffer.from(arrayBuffer), 'big5').toString());
+            .then(arrayBuffer => new TextDecoder('big5').decode(new Uint8Array(arrayBuffer)))
 
         const dom = new jsdom.JSDOM(text);
         const doc = dom.window.document;
@@ -264,9 +267,9 @@ export const GET = async (request: NextRequest, _try = 0) => {
                 prerequisites: prerequisites,
                 restrictions: course_restriction,
                 raw_id: course_id,
+                enrolled: parseInt(enrollment) ?? 0,
             });
 
-            // console.log(normalizedCourses)
 
         }
     }));
